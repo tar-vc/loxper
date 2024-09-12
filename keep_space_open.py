@@ -47,7 +47,7 @@ class KeepSpaceOpen:
         time.sleep(10)
 
         # ? Enter the codespace
-        browser.find_element(By.XPATH, '/html/body/div[1]/div[5]/main/div/div[2]/div[3]/div/div[2]/div/div/div[1]/div[2]/div/a/span').click()
+        browser.find_element(By.XPATH, '/html/body/div[1]/div[5]/main/div/div[2]/div[3]/div/div[3]/div/div/div[1]/div[2]/div/a/span').click()
         time.sleep(60)
 
         # @Switch to the codespace tab
