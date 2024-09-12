@@ -7,6 +7,7 @@ from selenium.webdriver.common.by import By
 import os
 import requests
 from selenium.webdriver.firefox.options import Options
+from keep_alive import keep_alive
 
 
 class PrinteDiscord:
@@ -90,19 +91,16 @@ class KeepSpaceOpen:
         # PrinteDiscord('```diff\n- codespace is ❌ \n```')
         # time.sleep(6)
 
-if __name__ == '__main__':
-    from selenium import webdriver
 
 if __name__ == '__main__':
     from selenium import webdriver
+
+    keep_alive()
 
     options = Options()
     options.add_argument("--headless")
     browser = webdriver.Firefox(options=options)
 
-    GitBot = KeepSpaceOpen(browser)
-    GitBot.login_github_with_cookies()
-    GitBot.open_codeSpace()
     GitBot = KeepSpaceOpen(browser)
     GitBot.login_github_with_cookies()
     GitBot.open_codeSpace()
