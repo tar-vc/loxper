@@ -6,6 +6,7 @@ import json
 from selenium.webdriver.common.by import By
 import os
 import requests
+from selenium.webdriver.firefox.options import Options
 
 
 class PrinteDiscord:
@@ -92,8 +93,16 @@ class KeepSpaceOpen:
 if __name__ == '__main__':
     from selenium import webdriver
 
-    browser = webdriver.Firefox()
+if __name__ == '__main__':
+    from selenium import webdriver
 
+    options = Options()
+    options.add_argument("--headless")
+    browser = webdriver.Firefox(options=options)
+
+    GitBot = KeepSpaceOpen(browser)
+    GitBot.login_github_with_cookies()
+    GitBot.open_codeSpace()
     GitBot = KeepSpaceOpen(browser)
     GitBot.login_github_with_cookies()
     GitBot.open_codeSpace()
