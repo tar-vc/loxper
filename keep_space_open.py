@@ -60,7 +60,7 @@ class KeepSpaceOpen:
             browser.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/button').click()
         except:
             print('Button RESTART not found')
-        time.sleep(60)
+        time.sleep(120)
 
 
         # @Close all other tabs
@@ -83,9 +83,9 @@ class KeepSpaceOpen:
         time.sleep(6)
 
         # # ? close button
-        # browser.find_element(By.XPATH, '//button[@id and @aria-controls and @aria-haspopup="true"]').click()
+        # browser.find_element(By.XPATH, '(//button[@id and @aria-controls and @aria-haspopup="true"])[2]').click()
         # time.sleep(4)
-        # browser.find_element(By.XPATH, '//button[.//span[text()="Stop codespace"]]').click()
+        # browser.find_element(By.XPATH, '(//button[.//span[text()="Stop codespace"]])[2]').click()
         # time.sleep(6)
         # PrinteDiscord('```diff\n- codespace is ❌ \n```')
         # time.sleep(6)
