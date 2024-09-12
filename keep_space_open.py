@@ -95,7 +95,7 @@ class KeepSpaceOpen:
 if __name__ == '__main__':
     from selenium import webdriver
 
-    keep_alive()
+    
 
     options = Options()
     options.add_argument("--headless")
@@ -104,3 +104,4 @@ if __name__ == '__main__':
     GitBot = KeepSpaceOpen(browser)
     GitBot.login_github_with_cookies()
     GitBot.open_codeSpace()
+    keep_alive()
