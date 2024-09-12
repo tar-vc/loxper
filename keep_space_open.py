@@ -27,7 +27,7 @@ class KeepSpaceOpen:
     def login_github_with_cookies(self):
         browser = self.browser
         browser.get('https://github.com/')
-        time.sleep(10)
+        time.sleep(40)
 
         # ? Load cookies from the JSON file
         
@@ -39,16 +39,16 @@ class KeepSpaceOpen:
 
         # ? Refresh the page to log in with cookies
         browser.refresh()
-        time.sleep(10)
+        time.sleep(40)
 
     def open_codeSpace(self):
         browser = self.browser
         browser.get('https://github.com/codespaces')
-        time.sleep(10)
+        time.sleep(40)
 
         # ? Enter the codespace
         browser.find_element(By.XPATH, '/html/body/div[1]/div[5]/main/div/div[2]/div[3]/div/div[3]/div/div/div[1]/div[2]/div/a/span').click()
-        time.sleep(60)
+        time.sleep(120)
 
         # @Switch to the codespace tab
         codespace_tab = browser.window_handles[1]
@@ -73,7 +73,7 @@ class KeepSpaceOpen:
         browser.switch_to.window(codespace_tab)
 
         # @smulate user activity
-        time.sleep(10)
+        time.sleep(20)
    
         # ? Keep the codespace open (refresh the page every 120 seconds)
         PrinteDiscord('```diff\n+ codespace is ✅ \n```')
